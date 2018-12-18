@@ -24,11 +24,19 @@ class IOSTest01 extends AppiumBase {
         driver = getDriver();
     }
 
+
     @Test
     public void SomeTest() {
         initialPageIOS = new InitialPageIOS(driver);
-        initialPageIOS.openGenderPage();
-        genderPageIOS = new GenderPageIOS(driver);
+        genderPageIOS = initialPageIOS.openGenderPage(driver);
         genderPageIOS.selectOther();
     }
+//
+//    @Test
+//    public void SomeTest() {
+//        initialPageIOS = new InitialPageIOS(driver);
+//        initialPageIOS.openGenderPage();
+//        genderPageIOS = new GenderPageIOS(driver);
+//        genderPageIOS.selectOther();
+//    }
 }

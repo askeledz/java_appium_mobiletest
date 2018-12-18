@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class InitialPageIOS {
 
+
     public InitialPageIOS(WebDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -20,8 +21,14 @@ public class InitialPageIOS {
     public MobileElement letsGoButton;
 
 
-    public void openGenderPage() {
+    public GenderPageIOS openGenderPage(WebDriver driver) {
         letsGoButton.click();
+        return new GenderPageIOS(driver);
     }
+
+
+//    public void openGenderPage() {
+//        letsGoButton.click();
+//    }
 
 }
