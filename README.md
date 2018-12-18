@@ -72,7 +72,7 @@ Build WebDriverAgentRunner: -->
 
     xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=c90fffb424403ecceab1707cc65bff6d7e6828c3' test
 
-Stare test on Real device: -->
+Run test on Real device: -->
 
     mvn clean test -P ios -Dtest=AppiumTest02 -Ddevice=iphone -Ddevice.id=c90fffb424403ecceab1707cc65bff6d7e6828c3 -    DpathToAppFile=/Users/askeledzija/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
