@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite
+        SYSTEM 'http://testng.org/testng-1.0.dtd'>
+<suite name="Test executed using local WebDriver">
+    <listeners>
+        <!--<listener class-name="com.autotest.driver.LocalWebDriverListener"/>-->
+        <!--<listener class-name="com.autotest.util.AnnotationTransformer"/>-->
+        <!--<listener class-name="com.autotest.util.LogListener"/>-->
+    </listeners>
+    <test name="Tests run in Browser provided by command line parameter">
+        <classes>
+            <!--Filters-->
+            <class name="com.as.appium.tests.ios.IOSTest01"></class>
+        </classes>
+    </test>
+</suite>
