@@ -69,8 +69,8 @@ Prerequesit: -->
 https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
 
 Build WebDriverAgentRunner: -->
-        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination             
-        'id=c90fffb424403ecceab1707cc65bff6d7e6828c3' test
+
+    xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=c90fffb424403ecceab1707cc65bff6d7e6828c3' test
 
 Stare test on Real device: -->
 
