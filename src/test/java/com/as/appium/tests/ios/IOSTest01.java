@@ -16,7 +16,7 @@ class IOSTest01 extends AppiumBase {
 
     private static WebDriver driver = null;
 
-    protected GenderPageIOS genderPageIOS ;
+    protected GenderPageIOS genderPageIOS;
     protected InitialPageIOS initialPageIOS;
 
     @BeforeTest
@@ -31,12 +31,4 @@ class IOSTest01 extends AppiumBase {
         genderPageIOS = initialPageIOS.openGenderPage(driver);
         genderPageIOS.selectOther();
     }
-//
-//    @Test
-//    public void SomeTest() {
-//        initialPageIOS = new InitialPageIOS(driver);
-//        initialPageIOS.openGenderPage();
-//        genderPageIOS = new GenderPageIOS(driver);
-//        genderPageIOS.selectOther();
-//    }
 }

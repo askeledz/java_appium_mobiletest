@@ -13,22 +13,17 @@ import org.openqa.selenium.support.PageFactory;
 public class InitialPageIOS {
 
 
-    public InitialPageIOS(WebDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
     //FindBy XPATH
     @FindBy(xpath = "//XCUIElementTypeButton[@name=\"Let's go!\"]")
     public MobileElement letsGoButton;
 
+    public InitialPageIOS(WebDriver driver) {
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public GenderPageIOS openGenderPage(WebDriver driver) {
         letsGoButton.click();
         return new GenderPageIOS(driver);
     }
-
-
-//    public void openGenderPage() {
-//        letsGoButton.click();
-//    }
 
 }
