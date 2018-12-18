@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Author: askeledzija
+ */
+
 
 @Listeners(ScreenshotListener.class)
 public class AppiumBase {

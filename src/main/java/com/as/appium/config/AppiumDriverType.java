@@ -12,6 +12,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 
+/**
+ * Author: askeledzija
+ */
+
+
 public enum AppiumDriverType implements AppiumDriverSetup {
 
     ANDROID {

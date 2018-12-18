@@ -7,8 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Created by Created by Andrej on Jun 2017.
+ * Author: askeledzija
  */
+
 public class GenderPageIOS  {
 
 

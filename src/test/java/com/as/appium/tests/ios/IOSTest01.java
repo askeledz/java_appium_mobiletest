@@ -7,6 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+/**
+ * Author: askeledzija
+ */
+
+
 class IOSTest01 extends AppiumBase {
 
     private static WebDriver driver = null;

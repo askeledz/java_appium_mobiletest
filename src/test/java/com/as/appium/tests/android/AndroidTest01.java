@@ -5,6 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+/**
+ * Author: askeledzija
+ */
+
+
 public class AndroidTest01 extends AppiumBase {
 
     private static WebDriver driver = null;
