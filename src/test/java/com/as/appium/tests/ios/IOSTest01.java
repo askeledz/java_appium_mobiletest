@@ -26,9 +26,11 @@ class IOSTest01 extends AppiumBase {
 
 
     @Test
-    public void SomeTest() {
+    public void SomeTest() throws InterruptedException {
         initialPageIOS = new InitialPageIOS(driver);
         genderPageIOS = initialPageIOS.openGenderPage(driver);
+        genderPageIOS.selectMale();
         genderPageIOS.selectOther();
+        Thread.sleep(2000);
     }
 }
