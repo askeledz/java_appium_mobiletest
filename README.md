@@ -12,8 +12,11 @@ Following may be useful:
 ## Run Android emulator and get ID
 
 -    cd ~/Library/Android/sdk/tools
--    emulator -avd <emulatorName> --> (e.g. emulator -avd Nexus_5X_API_28)
--    adb devices
+get Emulator Name
+-    ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
+
+-    ${ANDROID_SDK_ROOT}/emulator/emulator -avd Nexus_5X_API_28
+
     
 -OR
 
@@ -27,7 +30,9 @@ Following may be useful:
 
 ### Run Android test from CMD 
 
-    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/app_android/app-staging-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+get Emulator ID and run test
+-    adb devices
+-    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/app_android/app-staging-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 

@@ -1,6 +1,8 @@
 package com.as.appium.tests.android;
 
-import com.as.appium.base.AppiumBase;
+import com.as.appium.base.BaseAppium;
+import com.as.appium.pages.android.GenderPageAndroid;
+import com.as.appium.pages.android.InitialPageAndroid;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -10,10 +12,12 @@ import org.testng.annotations.Test;
  */
 
 
-public class AndroidTest01 extends AppiumBase {
+public class AndroidTest01 extends BaseAppium {
 
     private static WebDriver driver = null;
 
+    protected GenderPageAndroid genderPageAndroid;
+    protected InitialPageAndroid initialPageAndroid;
 
     @BeforeTest
     public void doBeforeTest() throws Exception {
@@ -21,7 +25,11 @@ public class AndroidTest01 extends AppiumBase {
     }
 
     @Test
-    public void SomeTest() {
-
+    public void SomeTest() throws InterruptedException {
+        initialPageAndroid = new InitialPageAndroid(driver);
+        genderPageAndroid = initialPageAndroid.openGenderPage(driver);
+        genderPageAndroid.selectMale();
+        genderPageAndroid.selectOther();
+        Thread.sleep(2000);
     }
 }

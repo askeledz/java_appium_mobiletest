@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @Listeners(ScreenshotListener.class)
-public class AppiumBase {
+public class BaseAppium {
 
     private static List<AppiumFactory> webDriverThreadPool = Collections.synchronizedList(new ArrayList<AppiumFactory>());
     private static ThreadLocal<AppiumFactory> appiumFactory;

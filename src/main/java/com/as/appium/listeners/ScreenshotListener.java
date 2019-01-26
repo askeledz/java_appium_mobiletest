@@ -1,6 +1,6 @@
 package com.as.appium.listeners;
 
-import com.as.appium.base.AppiumBase;
+import com.as.appium.base.BaseAppium;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -52,7 +52,7 @@ public class ScreenshotListener extends TestListenerAdapter {
     @Override
     public void onTestFailure(ITestResult failingTest) {
         try {
-            WebDriver driver = AppiumBase.getDriver();
+            WebDriver driver = BaseAppium.getDriver();
             String screenshotDirectory = System.getProperty("screenshotDirectory", "target/screenshots");
             String screenshotAbsolutePath = screenshotDirectory + File.separator + System.currentTimeMillis() + "_" + failingTest.getName() + ".png";
             File screenshot = new File(screenshotAbsolutePath);

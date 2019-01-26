@@ -1,6 +1,6 @@
 package com.as.appium.tests.ios;
 
-import com.as.appium.base.AppiumBase;
+import com.as.appium.base.BaseAppium;
 import com.as.appium.pages.ios.GenderPageIOS;
 import com.as.appium.pages.ios.InitialPageIOS;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  */
 
 
-class IOSTest01 extends AppiumBase {
+class IOSTest01 extends BaseAppium {
 
     private static WebDriver driver = null;
 

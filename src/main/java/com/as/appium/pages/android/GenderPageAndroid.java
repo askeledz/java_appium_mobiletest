@@ -1,4 +1,4 @@
-package com.as.appium.pages.ios;
+package com.as.appium.pages.android;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -10,24 +10,24 @@ import org.openqa.selenium.support.PageFactory;
  * Author: askeledzija
  */
 
-public class GenderPageIOS  {
+public class GenderPageAndroid {
 
 
-    public GenderPageIOS(WebDriver driver) {
+    public GenderPageAndroid(WebDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     //FindBy XPATH
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"female\"]")
+    @FindBy(xpath = "//*[@text='female']")
     public MobileElement femaleButton;
 
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"male\"]")
+    @FindBy(xpath = "//*[@text='male']")
     public MobileElement maleButton;
 
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"other\"]")
+    @FindBy(xpath = "//*[@text='other']")
     public MobileElement otherButton;
 
-    @FindBy (xpath = "xpath=//*[@id='genderNextPage']")
+    @FindBy (xpath = "//*[@id='genderNextPage']")
     public MobileElement nextBtn;
 
 
