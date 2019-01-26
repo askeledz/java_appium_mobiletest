@@ -7,6 +7,17 @@ Following may be useful:
 - Android Studio (Allows you to install SDK and Emulators) - https://developer.android.com/studio/index.html
 - XCode - https://developer.apple.com/xcode/
 
+## Prerequisites
+.bash_profile
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
+export ANDROID_HOME=/Users/askeledzija/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/askeledzija/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/askeledzija/.android/avd
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$HOME/.rbenv/shims:$PATH
+
+
 ## Android 
 
 ## Run Android emulator and get ID
