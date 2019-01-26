@@ -27,22 +27,77 @@ Following may be useful:
 
 ### Run Android test from CMD 
 
-    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/app_android/app-qa-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/app_android/app-staging-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 
 ### Inspect Android app element
 
-Start Inspector session in Appium Desktop
+Using Inspector session in Appium Desktop
 Import dependencies:
 e.g
 
     {
-    "app": "/Users/askeledzija/Documents/Private/Development/app_android/app-qa-release.apk",
+    "app": "/Users/askeledzija/Documents/Private/Development/app_android/app-staging-release.apk",
     "VERSION": "9.0",
     "deviceName": "Android device",
     "platformName": "Android"
     }
+
+
+- OR 
+
+Using UIAutomatorViewer
+
+.bash_profile
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
+export ANDROID_HOME=/Users/askeledzija/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/askeledzija/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/askeledzija/.android/avd
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$HOME/.rbenv/shims:$PATH
+
+
+${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
+
+adb kill-server
+
+${ANDROID_SDK_ROOT}/emulator/emulator -avd Nexus_5X_API_28
+
+adb start-server
+
+adb devices
+
+Install the app: 
+
+adb -s emulator-5554 install /Users/askeledzija/Documents/Private/Development/app_android/app-staging-release.apk
+
+(If the installation is successful then you will get your app in the launcher of your android emulator.)
+
+Run UIAutomatorViewer
+uiautomatorviewer
+
+- OR 
+
+Using Appium Studios
+
+${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
+
+adb kill-server
+
+${ANDROID_SDK_ROOT}/emulator/emulator -avd Nexus_5X_API_28
+
+adb start-server
+
+adb devices
+
+Run Appium Studio
+    - Import Device (Emulator-5554)
+    - Import app
+    - Run app
+    - Select the app and Start Recording.
+
 
 
 ## iOS
