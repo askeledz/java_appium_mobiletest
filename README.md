@@ -11,9 +11,9 @@ Following may be useful:
 .bash_profile
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
-export ANDROID_HOME=/Users/<username>/Library/Android/sdk
-export ANDROID_SDK_ROOT=/Users/<username>/Library/Android/sdk
-export ANDROID_AVD_HOME=/Users/<username>/.android/avd
+export ANDROID_HOME=/Users/{username}/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/{username}/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/{username}/.android/avd
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$HOME/.rbenv/shims:$PATH
 
@@ -43,7 +43,7 @@ get Emulator Name
 
 get Emulator ID and run test
 -    adb devices
--    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/<username>/Documents/Private/Development/app_android/app-staging-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+-    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/{username}/Documents/Private/Development/app_android/app-staging-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 
@@ -54,7 +54,7 @@ Import dependencies:
 e.g
 
     {
-    "app": "/Users/<username>/path/to/app-staging-release.apk",
+    "app": "/Users/{username}/path/to/app-staging-release.apk",
     "VERSION": "9.0",
     "deviceName": "Android device",
     "platformName": "Android"
@@ -68,9 +68,9 @@ Using UIAutomatorViewer
 .bash_profile
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
-export ANDROID_HOME=/Users/<username>/Library/Android/sdk
-export ANDROID_SDK_ROOT=/Users/<username>/Library/Android/sdk
-export ANDROID_AVD_HOME=/Users/<username>/.android/avd
+export ANDROID_HOME=/Users/{username}/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/{username}/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/{username}/.android/avd
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$HOME/.rbenv/shims:$PATH
 
@@ -87,7 +87,7 @@ adb devices
 
 Install the app: 
 
-adb -s emulator-5554 install /Users/<username>/path/to/app-staging-release.apk
+adb -s emulator-5554 install /Users/{username}/path/to/app-staging-release.apk
 
 (If the installation is successful then you will get your app in the launcher of your android emulator.)
 
@@ -129,7 +129,7 @@ Run Appium Studio
 
 ### Run iOS test on simulator from CMD
 
-    mvn clean test -P ios -Dtest=IOSTest01 -Ddevice=iphonesim -Ddevice.id=9EA94D57-DCA1-49F0-9BB0-BAADFA092496 -DpathToAppFile=/Users/<username>/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+    mvn clean test -P ios -Dtest=IOSTest01 -Ddevice=iphonesim -Ddevice.id=9EA94D57-DCA1-49F0-9BB0-BAADFA092496 -DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 ### For Real Apple devices follow the instructions:
@@ -145,7 +145,7 @@ Build WebDriverAgentRunner: -->
 
 Run test on Real device: -->
 
-    mvn clean test -P ios -Dtest=AppiumTest02 -Ddevice=iphone -Ddevice.id=c90fffb424403ecceab1707cc65bff6d7e6828c3 -    DpathToAppFile=/Users/<username>/Library/Developer/Xcode/DerivedData/AppName-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+    mvn clean test -P ios -Dtest=AppiumTest02 -Ddevice=iphone -Ddevice.id=c90fffb424403ecceab1707cc65bff6d7e6828c3 -    DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/AppName-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 //-DbundleID=test4u.iosappaskeledz
 
@@ -163,7 +163,7 @@ Appium Inspector:
         "platformVersion": "12.1",
         "deviceName": "iPhone XR",
         "automationName": "XCUITest",
-        "app": "/Users/<username>/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app"
+        "app": "/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app"
         }
 
 
