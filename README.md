@@ -204,4 +204,4 @@ You will need to place a appium.xcconfig in the `${project.basedir}/src/test/res
 Devices used for performing tests need to be added to https://developer.apple.com/account/ios/device/
 Machines running tests will need to download a test certificate from https://developer.apple.com/account/ios/certificate/development (Do this via Xcode)
 
-In iOS8, devices each have their own setting which enables or disables UIAutomation, It lives in the “Developer” view in the Settings app. You need to verify that UIAutomation is enabled in this view before the simulator or device can be used.
+In iOS8, devices each have their own setting which enables or disables UIAutomation, It lives in the “Developer” view in the Settings app. You need to verify that UIAutomation is enabled in this view before the simulator or device can be used..
