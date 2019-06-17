@@ -7,15 +7,11 @@ Following may be useful:
 - Android Studio (Allows you to install SDK and Emulators) - https://developer.android.com/studio/index.html
 - XCode - https://developer.apple.com/xcode/
 
-## Prerequisites
-.bash_profile
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
-export ANDROID_HOME=/Users/{username}/Library/Android/sdk
-export ANDROID_SDK_ROOT=/Users/{username}/Library/Android/sdk
-export ANDROID_AVD_HOME=/Users/{username}/.android/avd
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH=$HOME/.rbenv/shims:$PATH
+
+## Prerequisites
+
+https://www.swtestacademy.com/how-to-install-appium-on-mac/
 
 
 ## Android 
@@ -26,7 +22,7 @@ export PATH=$HOME/.rbenv/shims:$PATH
 get Emulator Name
 -    ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
 
--    ${ANDROID_SDK_ROOT}/emulator/emulator -avd Nexus_5X_API_28
+-    ${ANDROID_SDK_ROOT}/emulator/emulator -avd Pixel_3_API_28
 
     
 -OR
@@ -65,16 +61,6 @@ e.g
 
 Using UIAutomatorViewer
 
-.bash_profile
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
-export ANDROID_HOME=/Users/{username}/Library/Android/sdk
-export ANDROID_SDK_ROOT=/Users/{username}/Library/Android/sdk
-export ANDROID_AVD_HOME=/Users/{username}/.android/avd
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH=$HOME/.rbenv/shims:$PATH
-
-
 ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
 
 adb kill-server
@@ -96,7 +82,7 @@ uiautomatorviewer
 
 - OR 
 
-Using Appium Studios
+Using AppiumStudio
 
 ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
 
@@ -109,7 +95,7 @@ adb start-server
 adb devices
 
 Run Appium Studio
-    - Import Device (Emulator-5554)
+    - Add Device (Emulator-5554)
     - Import app
     - Run app
     - Select the app and Start Recording.
