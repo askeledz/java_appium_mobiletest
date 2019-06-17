@@ -2,11 +2,9 @@ package com.as.appium.tests.android;
 
 
 import com.as.appium.base.BaseAppium;
-import com.as.appium.pages.android.GenderPageAndroid;
 import com.as.appium.pages.android.InitialPageAndroid;
 import com.as.appium.pages.android.RegisterPageAndroid;
 import com.as.appium.pages.android.WelcomePageAndroid;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
