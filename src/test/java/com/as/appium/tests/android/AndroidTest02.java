@@ -30,12 +30,12 @@ public class AndroidTest02 extends BaseAppium {
         welcomePageAndroid = new WelcomePageAndroid(driver);
         registerPageAndroid = welcomePageAndroid.openRegisterPage(driver);
         registerPageAndroid.enterFirstName();
-        registerPageAndroid.enterLastName();
-        registerPageAndroid.enterEmail();
+//        registerPageAndroid.enterLastName();
+//        registerPageAndroid.enterEmail();
         registerPageAndroid.enterPassword();
-        registerPageAndroid.setCheckTC();
-        registerPageAndroid.setCheckNS();
-        registerPageAndroid.clickOnRegisterButton();
+//        registerPageAndroid.setCheckTC();
+//        registerPageAndroid.setCheckNS();
+//        registerPageAndroid.clickOnRegisterButton();
 
         Thread.sleep(2000);
     }
