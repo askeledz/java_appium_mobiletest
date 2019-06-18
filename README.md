@@ -4,14 +4,30 @@ Mobile Appium Tests
 Following may be useful:
 
 - Appium Desktop - https://github.com/appium/appium-desktop/releases/latest 
+- Appium Studio - https://experitest.com/mobile-test-automation/appium-studio/
 - Android Studio (Allows you to install SDK and Emulators) - https://developer.android.com/studio/index.html
 - XCode - https://developer.apple.com/xcode/
 
 
-
 ## Prerequisites
 
-https://www.swtestacademy.com/how-to-install-appium-on-mac/
+- Follow the instrcuctions:
+    https://www.swtestacademy.com/how-to-install-appium-on-mac/
+
+- Put this in the .profile
+
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home
+    export ANDROID_HOME=/Users/askeledzija/Library/Android/sdk
+    export ANDROID_SDK_ROOT=/Users/askeledzija/Library/Android/sdk
+    export PATH=$ANDROID_HOME/platform-tools:$PATH
+    export PATH=$ANDROID_HOME/tools:$PATH
+    export PATH=$ANDROID_HOME/tools/bin:$PATH
+    export PATH=$JAVA_HOME/bin:$PATH
+    export PATH=/usr/local/Cellar/maven/3.6.1/bin:$PATH
+
+- Put this in .zshrc or .bashrc
+
+    source .profile
 
 
 ## Android 
@@ -21,9 +37,8 @@ https://www.swtestacademy.com/how-to-install-appium-on-mac/
 -    cd ~/Library/Android/sdk/tools
 get Emulator Name
 -    ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
-
--    ${ANDROID_SDK_ROOT}/emulator/emulator -avd Pixel_3_API_28
-
+run Emulator
+-    ${ANDROID_SDK_ROOT}/emulator/emulator -avd Pixel_2_API_25
     
 -OR
 
@@ -39,7 +54,7 @@ get Emulator Name
 
 get Emulator ID and run test
 -    adb devices
--    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/{username}/Documents/Private/Development/app_android/app-staging-release.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+-    mvn clean test -P android -Dtest=AndroidTest02 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/workspace/autotest-appium-template/Ioniq.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 

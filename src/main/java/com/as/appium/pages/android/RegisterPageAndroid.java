@@ -48,7 +48,10 @@ public class RegisterPageAndroid {
     @FindBy(xpath = "//*[@text='Create Account']")
     public MobileElement createAccountButton;
 
-    public void enterFirstName() { firstNameInput.sendKeys("Name");}
+    public void enterFirstName() {
+        firstNameInput.sendKeys("Name");
+        driver.hideKeyboard();
+    }
     public void enterLastName() { lastNameInput.sendKeys("LAst");}
     public void enterEmail() { emailInput.sendKeys("mail@test.com");}
     public void enterPassword() { passwordInput.sendKeys("pass");}
