@@ -16,14 +16,18 @@ Following may be useful:
 
 - Put this in the .profile
 
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home
-    export ANDROID_HOME=/Users/askeledzija/Library/Android/sdk
-    export ANDROID_SDK_ROOT=/Users/askeledzija/Library/Android/sdk
-    export PATH=$ANDROID_HOME/platform-tools:$PATH
-    export PATH=$ANDROID_HOME/tools:$PATH
-    export PATH=$ANDROID_HOME/tools/bin:$PATH
-    export PATH=$JAVA_HOME/bin:$PATH
-    export PATH=/usr/local/Cellar/maven/3.6.1/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+export ANDROID_HOME=/Users/username/Library/Android/sdk
+export JMETER_HOME=/Users/username/Documents/Private/Development/workspace/apache-jmeter-5.1.1
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
+export PATH=$JMETER_HOME/bin:$PATH
+export PATH=/usr/local/Cellar/maven/3.6.1/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+launchctl setenv ANDROID_HOME /Users/user/Library/Android/sdk
 
 - Put this in .zshrc or .bashrc
 
@@ -36,9 +40,9 @@ Following may be useful:
 
 -    cd ~/Library/Android/sdk/tools
 get Emulator Name
--    ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
+-    ${ANDROID_HOME}/emulator/emulator -avd -list-avds
 run Emulator
--    ${ANDROID_SDK_ROOT}/emulator/emulator -avd Pixel_2_API_25
+-    ${ANDROID_HOME}/emulator/emulator -avd Pixel_2_API_25
     
 -OR
 
