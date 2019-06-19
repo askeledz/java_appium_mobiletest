@@ -52,8 +52,10 @@ public class RegisterPageAndroid {
         firstNameInput.sendKeys(firstName);
     }
 
-    public void enterLastName(String lastName) {
+    public void enterLastName(AndroidDriver driver, String lastName) throws InterruptedException {
         lastNameInput.sendKeys(lastName);
+        driver.hideKeyboard();
+        Thread.sleep(3000);
     }
 
     public void enterEmail(String mail) {
