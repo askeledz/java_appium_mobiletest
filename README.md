@@ -30,7 +30,7 @@ export PATH=/usr/local/bin:$PATH
 launchctl setenv ANDROID_HOME /Users/username/Library/Android/sdk
 ```
 
-- If you prefere Appium Desktop, you need to setup ANDROID_HOME and JAVA_HOME under Appium/Configurations.
+- If you prefer Appium Desktop, you need to setup ANDROID_HOME and JAVA_HOME under Appium/Configurations.
 
 
 ## Android 
