@@ -14,6 +14,7 @@ Following may be useful:
 - Follow the instrcuctions:
     https://www.swtestacademy.com/how-to-install-appium-on-mac/
 
+```
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export ANDROID_HOME=/Users/username/Library/Android/sdk
@@ -26,6 +27,7 @@ export PATH=$JMETER_HOME/bin:$PATH
 export PATH=/usr/local/Cellar/maven/3.6.1/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 launchctl setenv ANDROID_HOME /Users/username/Library/Android/sdk
+```
 
 - Put this in .zshrc or .bashrc
 
