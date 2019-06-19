@@ -30,13 +30,13 @@ public class AndroidTest01 extends BaseAppium {
     public void RegisterSuccessTest() throws Exception {
         welcomePageAndroid = new WelcomePageAndroid((AndroidDriver)driver);
         registerPageAndroid = welcomePageAndroid.openRegisterPage((AndroidDriver)driver);
-         registerPageAndroid.enterFirstName();
-//        registerPageAndroid.enterLastName();
-//        registerPageAndroid.enterEmail();
-        registerPageAndroid.enterPassword((AndroidDriver)driver);
-//        registerPageAndroid.setCheckTC();
-//        registerPageAndroid.setCheckNS();
-//        registerPageAndroid.clickOnRegisterButton();
+        registerPageAndroid.enterFirstName("Andrej");
+        registerPageAndroid.enterLastName("Skeledzija");
+//        registerPageAndroid.enterEmail("andrej.skeledzija@gmail.com");
+        registerPageAndroid.enterPassword( (AndroidDriver) driver, "password123");
+        registerPageAndroid.setCheckTC();
+        registerPageAndroid.setCheckNS();
+        registerPageAndroid.clickOnRegisterButton();
 
         Thread.sleep(2000);
     }
