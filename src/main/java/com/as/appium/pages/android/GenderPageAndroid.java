@@ -2,8 +2,8 @@ package com.as.appium.pages.android;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -18,16 +18,16 @@ public class GenderPageAndroid {
     }
 
     //FindBy XPATH
-    @FindBy(xpath = "//*[@text='female']")
+    @AndroidFindBy(xpath = "//*[@text='female']")
     public MobileElement femaleButton;
 
-    @FindBy(xpath = "//*[@text='male']")
+    @AndroidFindBy(xpath = "//*[@text='male']")
     public MobileElement maleButton;
 
-    @FindBy(xpath = "//*[@text='other']")
+    @AndroidFindBy(xpath = "//*[@text='other']")
     public MobileElement otherButton;
 
-    @FindBy (xpath = "//*[@id='genderNextPage']")
+    @AndroidFindBy (xpath = "//*[@id='genderNextPage']")
     public MobileElement nextBtn;
 
 

@@ -3,9 +3,9 @@ package com.as.appium.pages.android;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -21,31 +21,31 @@ public class RegisterPageAndroid {
     }
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='First name']")
+    @AndroidFindBy(xpath = "//*[@text='First name']")
     public AndroidElement firstNameInput;
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='Last name']")
+    @AndroidFindBy(xpath = "//*[@text='Last name']")
     public AndroidElement lastNameInput;
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='Email']")
+    @AndroidFindBy(xpath = "//*[@text='Email']")
     public AndroidElement emailInput;
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='Password']")
+    @AndroidFindBy(xpath = "//*[@text='Password']")
     public AndroidElement passwordInput;
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='I agree to the Terms & Conditions.']")
+    @AndroidFindBy(xpath = "//*[@text='I agree to the Terms & Conditions.']")
     public AndroidElement checkTC;
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='I want to receive IONIQ Newsletter to my email.']")
+    @AndroidFindBy(xpath = "//*[@text='I want to receive IONIQ Newsletter to my email.']")
     public AndroidElement checkNS;
 
     // Find by XPATH
-    @FindBy(xpath = "//*[@text='Create Account']")
+    @AndroidFindBy(xpath = "//*[@text='Create Account']")
     public AndroidElement createAccountButton;
 
     public void enterFirstName(String firstName) {
