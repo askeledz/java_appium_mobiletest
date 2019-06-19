@@ -54,7 +54,7 @@ run Emulator
 
 get Emulator ID and run test
 -    adb devices
--    mvn clean test -P android -Dtest=AndroidTest02 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/workspace/autotest-appium-template/Ioniq.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+-    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/workspace/autotest-appium-template/Ioniq.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 
