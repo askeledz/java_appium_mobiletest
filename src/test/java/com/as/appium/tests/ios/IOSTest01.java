@@ -3,6 +3,7 @@ package com.as.appium.tests.ios;
 import com.as.appium.base.BaseAppium;
 import com.as.appium.pages.ios.GenderPageIOS;
 import com.as.appium.pages.ios.InitialPageIOS;
+import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -27,8 +28,8 @@ class IOSTest01 extends BaseAppium {
 
     @Test
     public void SomeTest() throws InterruptedException {
-        initialPageIOS = new InitialPageIOS(driver);
-        genderPageIOS = initialPageIOS.openGenderPage(driver);
+        initialPageIOS = new InitialPageIOS((IOSDriver)driver);
+        genderPageIOS = initialPageIOS.openGenderPage((IOSDriver)driver);
         genderPageIOS.selectMale();
         genderPageIOS.selectOther();
         Thread.sleep(2000);

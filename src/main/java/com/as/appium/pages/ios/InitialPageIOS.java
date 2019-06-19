@@ -1,9 +1,9 @@
 package com.as.appium.pages.ios;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -17,11 +17,11 @@ public class InitialPageIOS {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Let's go!\"]")
     public MobileElement letsGoButton;
 
-    public InitialPageIOS(WebDriver driver) {
+    public InitialPageIOS(IOSDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public GenderPageIOS openGenderPage(WebDriver driver) {
+    public GenderPageIOS openGenderPage(IOSDriver driver) {
         letsGoButton.click();
         return new GenderPageIOS(driver);
     }
