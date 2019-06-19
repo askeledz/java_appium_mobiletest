@@ -36,22 +36,23 @@ launchctl setenv ANDROID_HOME /Users/username/Library/Android/sdk
 ## Android 
 
 ## Run Android emulator and get ID
-
+```
 -    cd ~/Library/Android/sdk/tools
 get Emulator Name
 -    ${ANDROID_HOME}/emulator/emulator -avd -list-avds
 run Emulator
 -    ${ANDROID_HOME}/emulator/emulator -avd Pixel_2_API_25
-    
+```  
 -OR
 
+```
     Your emulator is out of date, please update by launching Android Studio:
  -  Start Android Studio
  -  Select menu "Tools > Android > SDK Manager"
  -  Click "SDK Tools" tab
  -  Check "Android Emulator" checkbox
  -  Click "OK"
-
+```
 
 ### Run Android test from CMD 
 
@@ -78,7 +79,7 @@ e.g
 - OR 
 
 Using UIAutomatorViewer
-
+```
 ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
 
 adb kill-server
@@ -97,9 +98,9 @@ adb -s emulator-5554 install /Users/{username}/path/to/app-staging-release.apk
 
 Run UIAutomatorViewer
 uiautomatorviewer
-
+```
 - OR 
-
+```
 Using AppiumStudio
 
 ${ANDROID_SDK_ROOT}/emulator/emulator -avd -list-avds
@@ -117,7 +118,7 @@ Run Appium Studio
     - Import app
     - Run app
     - Select the app and Start Recording.
-
+```
 
 
 ## iOS
@@ -132,9 +133,9 @@ Run Appium Studio
 
 
 ### Run iOS test on simulator from CMD
-
+```
     mvn clean test -P ios -Dtest=IOSTest01 -Ddevice=iphonesim -Ddevice.id=9EA94D57-DCA1-49F0-9BB0-BAADFA092496 -DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
-
+```
 
 ### For Real Apple devices follow the instructions:
 
@@ -144,13 +145,13 @@ Prerequesit: -->
 https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
 
 Build WebDriverAgentRunner: -->
-
+```
     xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=c90fffb424403ecceab1707cc65bff6d7e6828c3' test
-
+```
 Run test on Real device: -->
-
+```
     mvn clean test -P ios -Dtest=AppiumTest02 -Ddevice=iphone -Ddevice.id=c90fffb424403ecceab1707cc65bff6d7e6828c3 -    DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/AppName-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
-
+```
 //-DbundleID=test4u.iosappaskeledz
 
 
@@ -161,7 +162,7 @@ XCode --> Open Developer tool --> Accessibility Inspector
 
 
 Appium Inspector:
-
+```
         {
         "platformName": "iOS",
         "platformVersion": "12.1",
@@ -169,7 +170,7 @@ Appium Inspector:
         "automationName": "XCUITest",
         "app": "/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app"
         }
-
+```
 
 ### How do I run tests?
         
