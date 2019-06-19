@@ -25,7 +25,7 @@ export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$JMETER_HOME/bin:$PATH
 export PATH=/usr/local/Cellar/maven/3.6.1/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-launchctl setenv ANDROID_HOME /Users/user/Library/Android/sdk
+launchctl setenv ANDROID_HOME /Users/username/Library/Android/sdk
 
 - Put this in .zshrc or .bashrc
 
