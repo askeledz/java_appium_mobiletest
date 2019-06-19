@@ -63,9 +63,14 @@ public class RegisterPageAndroid {
     }
 
     public void enterPassword(AndroidDriver driver, String pass) {
+
         TouchAction ta = new TouchAction(driver);
         ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,197)).release().perform();
-        passwordInput.sendKeys(pass);
+
+        AndroidElement el2 = (AndroidElement) driver.findElementByAndroidUIAutomator("text(\"Password\")");
+        el2.click();
+        el2.sendKeys(pass);
+        //passwordInput.sendKeys(pass);
     }
 
     public void setCheckTC() {
