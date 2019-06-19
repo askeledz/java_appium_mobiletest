@@ -1,8 +1,8 @@
 package com.as.appium.pages.android;
 
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 public class WelcomePageAndroid {
 
 
-    public WelcomePageAndroid(WebDriver driver) {
+    public WelcomePageAndroid(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
@@ -35,7 +35,7 @@ public class WelcomePageAndroid {
     public void clickOnLoginButton() { loginButton.click(); }
     public void clickOnSkipButton() {skipButton.click();}
 
-    public RegisterPageAndroid openRegisterPage(WebDriver driver) {
+    public RegisterPageAndroid openRegisterPage(AndroidDriver driver) {
         registerButton.click();
         return new RegisterPageAndroid(driver);
     }
@@ -45,7 +45,7 @@ public class WelcomePageAndroid {
 //        return new LoginPageAndroid(driver);
 //    }
 
-    public InitialPageAndroid openInitialPage(WebDriver driver) {
+    public InitialPageAndroid openInitialPage(AndroidDriver driver) {
         skipButton.click();
         return new InitialPageAndroid(driver);
     }

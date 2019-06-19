@@ -1,8 +1,8 @@
 package com.as.appium.pages.android;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 public class GenderPageAndroid {
 
 
-    public GenderPageAndroid(WebDriver driver) {
+    public GenderPageAndroid(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 

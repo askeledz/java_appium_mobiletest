@@ -1,8 +1,8 @@
 package com.as.appium.pages.android;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,11 +17,11 @@ public class InitialPageAndroid {
     @FindBy(xpath = "//*[@text=concat('Let', \"'\", 's go!')]")
     public MobileElement letsGoButton;
 
-    public InitialPageAndroid(WebDriver driver) {
+    public InitialPageAndroid(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public GenderPageAndroid openGenderPage(WebDriver driver) {
+    public GenderPageAndroid openGenderPage(AndroidDriver driver) {
         letsGoButton.click();
         return new GenderPageAndroid(driver);
     }

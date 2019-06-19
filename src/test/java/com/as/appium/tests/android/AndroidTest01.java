@@ -28,8 +28,8 @@ public class AndroidTest01 extends BaseAppium {
 
     @Test
     public void RegisterSuccessTest() throws Exception {
-        welcomePageAndroid = new WelcomePageAndroid(driver);
-        registerPageAndroid = welcomePageAndroid.openRegisterPage(driver);
+        welcomePageAndroid = new WelcomePageAndroid((AndroidDriver)driver);
+        registerPageAndroid = welcomePageAndroid.openRegisterPage((AndroidDriver)driver);
          registerPageAndroid.enterFirstName();
 //        registerPageAndroid.enterLastName();
 //        registerPageAndroid.enterEmail();

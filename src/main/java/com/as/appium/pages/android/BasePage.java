@@ -1,7 +1,7 @@
 package com.as.appium.pages.android;
 
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,11 +13,11 @@ import org.testng.Assert;
 
 
 public class BasePage {
-    public WebDriver driver;
+    public AndroidDriver driver;
     public WebDriverWait wait;
 
     //Constructor
-    public BasePage (WebDriver driver){
+    public BasePage (AndroidDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver,15);
         PageFactory.initElements(driver, this);
