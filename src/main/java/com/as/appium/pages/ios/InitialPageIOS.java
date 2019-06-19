@@ -2,8 +2,8 @@ package com.as.appium.pages.ios;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -14,7 +14,7 @@ public class InitialPageIOS {
 
 
     //FindBy XPATH
-    @FindBy(xpath = "//XCUIElementTypeButton[@name=\"Let's go!\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Let's go!\"]")
     public MobileElement letsGoButton;
 
     public InitialPageIOS(WebDriver driver) {
