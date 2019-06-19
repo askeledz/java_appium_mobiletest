@@ -1,17 +1,13 @@
 package com.as.appium.pages.android;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.JavascriptExecutor;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.HashMap;
-
 
 /**
  * Author: dkatic
@@ -20,7 +16,6 @@ import java.util.HashMap;
 
 public class RegisterPageAndroid {
 
-    private AndroidDriver driver;
 
     public RegisterPageAndroid(WebDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -28,31 +23,31 @@ public class RegisterPageAndroid {
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='First name']")
-    public RemoteWebElement firstNameInput;
+    public AndroidElement firstNameInput;
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='Last name']")
-    public RemoteWebElement lastNameInput;
+    public AndroidElement lastNameInput;
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='Email']")
-    public RemoteWebElement emailInput;
+    public AndroidElement emailInput;
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='Password']")
-    public RemoteWebElement passwordInput;
+    public AndroidElement passwordInput;
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='I agree to the Terms & Conditions.']")
-    public MobileElement checkTC;
+    public AndroidElement checkTC;
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='I want to receive IONIQ Newsletter to my email.']")
-    public MobileElement checkNS;
+    public AndroidElement checkNS;
 
     // Find by XPATH
     @FindBy(xpath = "//*[@text='Create Account']")
-    public MobileElement createAccountButton;
+    public AndroidElement createAccountButton;
 
     public void enterFirstName() {
         firstNameInput.sendKeys("Name");
@@ -66,7 +61,10 @@ public class RegisterPageAndroid {
         emailInput.sendKeys("mail@test.com");
     }
 
-    public void enterPassword() {
+    public void enterPassword(AndroidDriver driver) {
+        TouchAction ta = new TouchAction(driver);
+        ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,
+                197)).release().perform();
         passwordInput.sendKeys("password");
     }
 
