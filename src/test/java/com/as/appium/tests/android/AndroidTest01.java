@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
  * Author: dkatic
  */
 
-public class AndroidTest02 extends BaseAppium {
+public class AndroidTest01 extends BaseAppium {
 
     private static WebDriver driver = null;
 
