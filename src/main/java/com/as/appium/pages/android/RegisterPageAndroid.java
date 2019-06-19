@@ -48,23 +48,22 @@ public class RegisterPageAndroid {
     @FindBy(xpath = "//*[@text='Create Account']")
     public AndroidElement createAccountButton;
 
-    public void enterFirstName() {
-        firstNameInput.sendKeys("Name");
+    public void enterFirstName(String firstName) {
+        firstNameInput.sendKeys(firstName);
     }
 
-    public void enterLastName() {
-        lastNameInput.sendKeys("LAst");
+    public void enterLastName(String lastName) {
+        lastNameInput.sendKeys(lastName);
     }
 
-    public void enterEmail() {
-        emailInput.sendKeys("mail@test.com");
+    public void enterEmail(String mail) {
+        emailInput.sendKeys(mail);
     }
 
-    public void enterPassword(AndroidDriver driver) {
+    public void enterPassword(AndroidDriver driver, String pass) {
         TouchAction ta = new TouchAction(driver);
-        ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,
-                197)).release().perform();
-        passwordInput.sendKeys("password");
+        ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,197)).release().perform();
+        passwordInput.sendKeys(pass);
     }
 
     public void setCheckTC() {
