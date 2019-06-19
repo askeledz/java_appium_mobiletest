@@ -10,7 +10,7 @@
     <test name="Tests run in Browser provided by command line parameter">
         <classes>
             <!--Filters-->
-            <class name="com.as.appium.tests.ios.IOSTest01"></class>
+            <class name="com.as.appium.tests.android.AndroidTest01"></class>
         </classes>
     </test>
 </suite>
