@@ -1,7 +1,7 @@
 package com.as.appium.pages.android;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
@@ -20,15 +20,15 @@ public class WelcomePageAndroid {
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Register']")
-    public AndroidElement registerButton;
+    public MobileElement registerButton;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Login']")
-    public AndroidElement loginButton;
+    public MobileElement loginButton;
 
     //Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Skip']")
-    public AndroidElement skipButton;
+    public MobileElement skipButton;
 
 
     public void clickOnRegisterButton() { registerButton.click(); }

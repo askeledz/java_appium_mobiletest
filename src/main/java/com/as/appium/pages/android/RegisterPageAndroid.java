@@ -1,8 +1,8 @@
 package com.as.appium.pages.android;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
@@ -22,31 +22,31 @@ public class RegisterPageAndroid {
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='First name']")
-    public AndroidElement firstNameInput;
+    public MobileElement firstNameInput;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Last name']")
-    public AndroidElement lastNameInput;
+    public MobileElement lastNameInput;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Email']")
-    public AndroidElement emailInput;
+    public MobileElement emailInput;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Password']")
-    public AndroidElement passwordInput;
+    public MobileElement passwordInput;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='I agree to the Terms & Conditions.']")
-    public AndroidElement checkTC;
+    public MobileElement checkTC;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='I want to receive IONIQ Newsletter to my email.']")
-    public AndroidElement checkNS;
+    public MobileElement checkNS;
 
     // Find by XPATH
     @AndroidFindBy(xpath = "//*[@text='Create Account']")
-    public AndroidElement createAccountButton;
+    public MobileElement createAccountButton;
 
     public void enterFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
@@ -67,7 +67,7 @@ public class RegisterPageAndroid {
         TouchAction ta = new TouchAction(driver);
         ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,197)).release().perform();
 
-        AndroidElement el2 = (AndroidElement) driver.findElementByAndroidUIAutomator("text(\"Password\")");
+        MobileElement el2 = (MobileElement) driver.findElementByAndroidUIAutomator("text(\"Password\")");
         el2.click();
         el2.sendKeys(pass);
         //passwordInput.sendKeys(pass);
