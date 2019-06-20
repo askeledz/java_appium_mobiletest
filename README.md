@@ -134,7 +134,7 @@ Run Appium Studio
 
 ### Run iOS test on simulator from CMD
 ```
-    mvn clean test -P ios -Dtest=IOSTest01 -Ddevice=iphonesim -Ddevice.id=9EA94D57-DCA1-49F0-9BB0-BAADFA092496 -DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+    mvn clean test -P ios -Dtest=IOSTest01 -Ddevice=iphonesim -Ddevice.id=43DB6B26-FB51-456D-A4F4-C50B367C24DF -DpathToAppFile=/Users/askeledzija/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/qa.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 ```
 
 ### For Real Apple devices follow the instructions:
@@ -163,12 +163,12 @@ XCode --> Open Developer tool --> Accessibility Inspector
 
 Appium Inspector:
 ```
-        {
+       {
         "platformName": "iOS",
         "platformVersion": "12.2",
         "deviceName": "iPhone XR",
         "automationName": "XCUITest",
-        "app": "/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app"
+        "app": "/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/qa.debug-iphonesimulator/Ioniq.app"
         }
 ```
 
