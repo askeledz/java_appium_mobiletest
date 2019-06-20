@@ -1,5 +1,6 @@
 package com.as.appium.pages.android;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -64,12 +65,31 @@ public class RegisterPageAndroid {
 
     public void enterPassword(AndroidDriver driver, String pass) {
 
-        TouchAction ta = new TouchAction(driver);
-        ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,197)).release().perform();
+//        TouchAction ta = new TouchAction(driver);
+//        ta.press(PointOption.point(591, 748)).moveTo(PointOption.point(622,197)).release().perform();
 
-        MobileElement el2 = (MobileElement) driver.findElementByAndroidUIAutomator("text(\"Password\")");
-        el2.click();
-        el2.sendKeys(pass);
+
+        //Identify Elememt using Text and scrollintoView
+//        MobileElement element1 = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+//                "new UiScrollable(new UiSelector().className(\"android.widget.ScrollView\")).scrollIntoView("
+//                        + "new UiSelector().text(\"Password\"))"));
+
+
+        //Identify Elememt using resourceId and scrollintoView
+        MobileElement element1 = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiScrollable(new UiSelector().className(\"android.widget.ScrollView\")).scrollIntoView("
+                        + "new UiSelector().resourceId(\"com.cobeisfresh.ioniq.qa:id/passwordInput\"))"));
+
+        element1.click();
+        element1.sendKeys(pass);
+
+//Perform the action on the element
+        System.out.println(element1.getAttribute("resourceId"));
+
+//
+//        MobileElement el2 = (MobileElement) driver.findElementByAndroidUIAutomator("text(\"Password\")");
+//        el2.click();
+//        el2.sendKeys(pass);
         //passwordInput.sendKeys(pass);
     }
 
@@ -81,8 +101,14 @@ public class RegisterPageAndroid {
         checkNS.click();
     }
 
-    public void clickOnRegisterButton() {
-        createAccountButton.click();
+    public void clickOnRegisterButton(AndroidDriver driver) {
+
+        //Identify Elememt using resourceId and scrollintoView
+        MobileElement element1 = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiScrollable(new UiSelector().className(\"android.widget.ScrollView\")).scrollIntoView("
+                        + "new UiSelector().resourceId(\"com.cobeisfresh.ioniq.qa:id/register\"))"));
+
+        element1.click();
     }
 
     public InitialPageAndroid openInitialPage(AndroidDriver driver) {
