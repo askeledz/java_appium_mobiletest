@@ -165,7 +165,7 @@ Appium Inspector:
 ```
         {
         "platformName": "iOS",
-        "platformVersion": "12.1",
+        "platformVersion": "12.2",
         "deviceName": "iPhone XR",
         "automationName": "XCUITest",
         "app": "/Users/{username}/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app"

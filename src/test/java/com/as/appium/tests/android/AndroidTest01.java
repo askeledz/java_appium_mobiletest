@@ -28,7 +28,7 @@ public class AndroidTest01 extends BaseAppium {
 
 
     @Test
-    public void RegisterSuccessTest() throws Exception {
+    public void RegisterSuccessAndroidTest() throws Exception {
         welcomePageAndroid = new WelcomePageAndroid((AndroidDriver)driver);
         registerPageAndroid = welcomePageAndroid.openRegisterPage((AndroidDriver)driver);
         registerPageAndroid.enterFirstName("Andrej");
@@ -44,7 +44,7 @@ public class AndroidTest01 extends BaseAppium {
 
 //    @Test
 //    public void RegisterSuccessTest() throws Exception {
-//        welcomePageAndroid = new WelcomePageAndroid((AndroidDriver)driver);
+//        welcomePageAndroid = new WelcomePageIOS((AndroidDriver)driver);
 //        registerPageAndroid = welcomePageAndroid.openRegisterPage((AndroidDriver)driver);
 //        registerPageAndroid.enterFirstName("Andrej");
 //        registerPageAndroid.enterLastName((AndroidDriver) driver, "Skeledzija");

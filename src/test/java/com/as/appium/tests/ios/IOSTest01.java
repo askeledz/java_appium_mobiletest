@@ -1,8 +1,11 @@
 package com.as.appium.tests.ios;
 
 import com.as.appium.base.BaseAppium;
-import com.as.appium.pages.ios.GenderPageIOS;
+import com.as.appium.pages.android.WelcomePageAndroid;
 import com.as.appium.pages.ios.InitialPageIOS;
+import com.as.appium.pages.ios.RegisterPageIOS;
+import com.as.appium.pages.ios.WelcomePageIOS;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
@@ -17,8 +20,10 @@ class IOSTest01 extends BaseAppium {
 
     private static WebDriver driver = null;
 
-    protected GenderPageIOS genderPageIOS;
+    protected WelcomePageIOS welcomePageIOS;
+    protected RegisterPageIOS registerPageIOS;
     protected InitialPageIOS initialPageIOS;
+
 
     @BeforeTest
     public void doBeforeTest() throws Exception {
@@ -27,11 +32,19 @@ class IOSTest01 extends BaseAppium {
 
 
     @Test
-    public void SomeTest() throws InterruptedException {
-        initialPageIOS = new InitialPageIOS((IOSDriver)driver);
-        genderPageIOS = initialPageIOS.openGenderPage((IOSDriver)driver);
-        genderPageIOS.selectMale();
-        genderPageIOS.selectOther();
+    public void RegisterSuccessIOSTest() throws InterruptedException {
+        welcomePageIOS = new WelcomePageIOS((IOSDriver)driver);
+        registerPageIOS = welcomePageIOS.openRegisterPage((IOSDriver)driver);
+
+
+        registerPageIOS.enterFirstName("Andrej");
+        registerPageIOS.enterLastName((IOSDriver) driver, "Skeledzija");
+        registerPageIOS.enterEmail("andrej.skeledzija@gmail.com");
+        registerPageIOS.enterPassword( "password123");
+        registerPageIOS.setCheckTC();
+        registerPageIOS.setCheckNS();
+        registerPageIOS.clickOnRegisterButton((IOSDriver) driver);
+
         Thread.sleep(2000);
     }
 }
