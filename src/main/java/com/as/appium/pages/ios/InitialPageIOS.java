@@ -1,16 +1,15 @@
 package com.as.appium.pages.ios;
 
+import com.as.appium.base.IOSBasePage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Author: askeledzija
  */
 
-public class InitialPageIOS {
+public class InitialPageIOS extends IOSBasePage {
 
 
     //FindBy XPATH
@@ -18,7 +17,7 @@ public class InitialPageIOS {
     public MobileElement letsGoButton;
 
     public InitialPageIOS(IOSDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        super(driver);
     }
 
     public GenderPageIOS openGenderPage(IOSDriver driver) {

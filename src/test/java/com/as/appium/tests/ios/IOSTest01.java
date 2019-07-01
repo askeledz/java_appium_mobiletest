@@ -1,11 +1,9 @@
 package com.as.appium.tests.ios;
 
 import com.as.appium.base.BaseAppium;
-import com.as.appium.pages.android.WelcomePageAndroid;
 import com.as.appium.pages.ios.InitialPageIOS;
 import com.as.appium.pages.ios.RegisterPageIOS;
 import com.as.appium.pages.ios.WelcomePageIOS;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;

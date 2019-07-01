@@ -1,7 +1,8 @@
 package com.as.appium.base;
 
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,16 +13,18 @@ import org.testng.Assert;
  */
 
 
-public class BasePage {
-    public WebDriver driver;
+public class IOSBasePage {
+    public IOSDriver driver;
     public WebDriverWait wait;
 
     //Constructor
-    public BasePage (WebDriver driver){
+    public IOSBasePage(IOSDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver,15);
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
+
 
     //Wait Wrapper Method
     public void waitVisibility(By elementBy) {

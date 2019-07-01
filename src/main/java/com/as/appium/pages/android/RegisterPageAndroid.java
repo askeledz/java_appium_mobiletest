@@ -1,24 +1,22 @@
 package com.as.appium.pages.android;
 
+import com.as.appium.base.AndroidBasePage;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.support.PageFactory;
+
 
 /**
  * Author: dkatic
  */
 
 
-public class RegisterPageAndroid {
+public class RegisterPageAndroid extends AndroidBasePage {
 
 
     public RegisterPageAndroid(AndroidDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        super(driver);
     }
 
     // Find by XPATH

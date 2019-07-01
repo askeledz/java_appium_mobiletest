@@ -1,22 +1,21 @@
 package com.as.appium.pages.ios;
 
-import io.appium.java_client.MobileBy;
+import com.as.appium.base.IOSBasePage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import org.openqa.selenium.support.PageFactory;
+
 
 /**
  * Author: dkatic
  */
 
 
-public class RegisterPageIOS {
+public class RegisterPageIOS extends IOSBasePage {
 
 
     public RegisterPageIOS(IOSDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        super(driver);
     }
 
     // Find by XPATH

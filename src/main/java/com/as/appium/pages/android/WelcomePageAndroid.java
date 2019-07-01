@@ -1,21 +1,20 @@
 package com.as.appium.pages.android;
 
+import com.as.appium.base.AndroidBasePage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Author :dkatic
  */
 
 
-public class WelcomePageAndroid {
+public class WelcomePageAndroid extends AndroidBasePage {
 
 
     public WelcomePageAndroid(AndroidDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        super(driver);
     }
 
     // Find by XPATH
