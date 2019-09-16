@@ -42,20 +42,19 @@ public class AndroidTest01 extends BaseAppium {
         Thread.sleep(2000);
     }
 
-//    @Test
-//    public void RegisterSuccessTest() throws Exception {
-//        welcomePageAndroid = new WelcomePageIOS((AndroidDriver)driver);
-//        registerPageAndroid = welcomePageAndroid.openRegisterPage((AndroidDriver)driver);
-//        registerPageAndroid.enterFirstName("Andrej");
-//        registerPageAndroid.enterLastName((AndroidDriver) driver, "Skeledzija");
-//        registerPageAndroid.enterEmail("andrej.skeledzija@gmail.com");
-//        registerPageAndroid.enterPassword( (AndroidDriver) driver, "password123");
-//        registerPageAndroid.setCheckTC();
-//        registerPageAndroid.setCheckNS();
-//        registerPageAndroid.clickOnRegisterButton();
-//
-//        Thread.sleep(2000);
-//    }
+//Template test for
+    @Test
+    public void Test01() throws Exception {
+       System.out.println("Test01");
+
+    }
+
+    @Test
+    public void Test02() throws Exception {
+        System.out.println("Test02");
+
+    }
+
 
 
 }
