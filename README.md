@@ -174,9 +174,13 @@ Appium Inspector:
 
 ### How do I run tests?
         
-- If you want to specify a specific Appium server you can use:
+- Check Active Profiles
 
-        mvn clean test -P <profileName> -Dtest=<testClassName> -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=<pathToAppFile> -DappiumServerURL=http://127.0.0.1:4723/wd/hub     
+    mvn help:active-profiles
+
+- If you want to specify a specific Profile you can use:
+
+        mvn clean test -P <profileName> -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=<pathToAppFile> -DappiumServerURL=http://127.0.0.1:4723/wd/hub     
 
 You can specify which device type to use by using one of the following switches:
 
