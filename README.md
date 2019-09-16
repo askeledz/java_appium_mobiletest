@@ -58,7 +58,7 @@ run Emulator
 
 get Emulator ID and run test
 -    adb devices
--    mvn clean test -P android -Dtest=AndroidTest01 -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/workspace/autotest-appium-template/Ioniq.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+-    mvn clean test -P android -Ddevice=androidsim -Ddevice.id=emulator-5554 -DpathToAppFile=/Users/askeledzija/Documents/Private/Development/workspace/autotest-appium-template/Ioniq.apk -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 
 
 
@@ -134,7 +134,7 @@ Run Appium Studio
 
 ### Run iOS test on simulator from CMD
 ```
-    mvn clean test -P ios -Dtest=IOSTest01 -Ddevice=iphonesim -Ddevice.id=43DB6B26-FB51-456D-A4F4-C50B367C24DF -DpathToAppFile=/Users/askeledzija/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/qa.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+    mvn clean test -P ios -Ddevice=iphonesim -Ddevice.id=43DB6B26-FB51-456D-A4F4-C50B367C24DF -DpathToAppFile=/Users/askeledzija/Library/Developer/Xcode/DerivedData/Ioniq-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/qa.debug-iphonesimulator/Ioniq.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 ```
 
 ### For Real Apple devices follow the instructions:
