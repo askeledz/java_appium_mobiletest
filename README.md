@@ -150,7 +150,7 @@ Build WebDriverAgentRunner: -->
 ```
 Run test on Real device: -->
 ```
-    mvn clean test -P ios -Dtest=AppiumTest02 -Ddevice=iphone -Ddevice.id=c90fffb424403ecceab1707cc65bff6d7e6828c3 -    DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/AppName-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
+    mvn clean test -P ios -Ddevice=iphone -Ddevice.id=c90fffb424403ecceab1707cc65bff6d7e6828c3 -    DpathToAppFile=/Users/{username}/Library/Developer/Xcode/DerivedData/AppName-czckahckwnmqfhdjtqoykgvbvlyg/Build/Products/dev.debug-iphonesimulator/appname.app -DappiumServerURL=http://127.0.0.1:4723/wd/hub
 ```
 //-DbundleID=test4u.iosappaskeledz
 
