@@ -176,7 +176,7 @@ Appium Inspector:
         
 - Check Active Profiles
 
-    mvn help:active-profiles
+    `mvn help:active-profiles`
 
 - If you want to specify a specific Profile you can use:
 
